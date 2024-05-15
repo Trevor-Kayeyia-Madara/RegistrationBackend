@@ -37,7 +37,7 @@ app.post('/register', async (req, res) => {
                 phone_number: phoneNumber,
                 email_address: emailAddress,
                 residence: residence,
-                house_of_prophets_fellowship_name: fellowshipName
+                micro_church: fellowshipName
             }
         ]);
 
