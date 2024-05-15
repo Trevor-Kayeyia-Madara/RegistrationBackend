@@ -13,7 +13,7 @@ const supabaseUrl = 'https://vmbfdfkiavbwzmegdfwk.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZtYmZkZmtpYXZid3ptZWdkZndrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU3ODE0NjAsImV4cCI6MjAzMTM1NzQ2MH0.jM_uDH5eOZ519B-Tj8p3jXSuJuamP0V-22MMb8pB3Sg';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-app.get('/registrations', async (req, res) => {
+app.get('/register', async (req, res) => {
     const { data, error } = await supabase
         .from('registrations')
         .select('*');
