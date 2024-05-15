@@ -15,21 +15,21 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 app.get('/register', async (req, res) => {
     const { data, error } = await supabase
-        .from('registrations')
+        .from('register')
         .select('*');
 
     if (error) {
         return res.status(500).json({ error: error.message });
     }
 
-    res.status(200).json({ registrations: data });
+    res.status(200).json({ register: data });
 });
 // Endpoint to handle registration
 app.post('/register', async (req, res) => {
     const { firstName, surname, phoneNumber, emailAddress, residence, fellowshipName } = req.body;
 
     const { data, error } = await supabase
-        .from('registrations')
+        .from('register')
         .insert([
             { 
                 first_name: firstName,
